@@ -54,9 +54,9 @@ class DetailsView:UIView{
         let temp = String(format: "%.2f", weather.temp)
         let tempMax = String(format: "%.2f", weather.tempMax)
         let tempMin = String(format: "%.2f", weather.tempMin)
-        self.lblTemp.text = "Tempreture is \(temp) C"
-        self.lblTempMAx.text = "MAX Temp. is \(tempMax) C"
-        self.lblTempMin.text = "MIN Temp is \(tempMin) C"
+        self.lblTemp.text = "Tempreture is \(temp) \((isCelsius ?? true) ? "C":"F")"
+        self.lblTempMAx.text = "MAX Temp. is \(tempMax) \((isCelsius ?? true) ? "C":"F")"
+        self.lblTempMin.text = "MIN Temp is \(tempMin) \((isCelsius ?? true) ? "C":"F")"
         self.lblWend.text = "Wind Speed is \(weather.wendSpeed ?? 0) m/s"
         self.lblHumedity.text = "Humidity is \(weather.humidity) %"
         self.lblDescription.text = "Weather is \(weather.description)"

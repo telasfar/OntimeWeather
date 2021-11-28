@@ -20,8 +20,8 @@ class LastDaysCell: UITableViewCell {
 
     func configCell(weather:WeatherModel){
        lblDescription.text = "Weather is \(weather.description) "
-       lblTempMax.text = "MAX Temp. is \(weather.tempMax) C"
-       lblTempMin.text = "MIN Temp is \(weather.tempMin) C"
+       lblTempMax.text = "MAX Temp. is \(weather.tempMax) \((isCelsius ?? true) ? "C":"F")"
+       lblTempMin.text = "MIN Temp is \(weather.tempMin) \((isCelsius ?? true) ? "C":"F")"
         
     }
 

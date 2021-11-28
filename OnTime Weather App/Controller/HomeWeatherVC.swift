@@ -161,7 +161,8 @@ class HomeWeatherVC: UIViewController {
         }
     }
     func saveLocations(latitude:Double ,longitude:Double)->LocationDB?{
-        guard let manageContext = appDelegate?.persistentContainer.viewContext,var title = txtFieldBookMark.text  else {return nil}
+        guard let manageContext = appDelegate?.persistentContainer.viewContext else {return nil}
+        var title = txtFieldBookMark.text ?? ""
         if title.isEmpty {title = "N/A"}
         locationDB = LocationDB(context: manageContext)
         locationDB!.latitude = latitude
